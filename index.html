@@ -3,151 +3,341 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yicheng Zhang</title>
-  <meta name="description" content="Yicheng Zhang — undergraduate student in Computer Science at Tsinghua University, working on efficient model architectures, machine learning systems, and recursive self-improvement.">
+  <title>Yicheng Zhang · Tsinghua University</title>
+  <meta name="description" content="Yicheng Zhang — undergraduate student in Computer Science at Tsinghua University and intern at Z.ai, working on efficient model architectures, machine learning systems, and recursive self-improvement.">
   <meta name="author" content="Yicheng Zhang">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Yicheng Zhang">
   <meta property="og:description" content="Undergraduate student in Computer Science at Tsinghua University. Efficient ML, ML systems, recursive self-improvement.">
+  <meta property="og:image" content="assets/img/avatar.jpg">
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-serif-4-var.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <main class="page">
 
-    <header class="hero">
-      <h1>Yicheng Zhang</h1>
-      <p class="role">
-        Undergraduate Student, Computer Science and Technology<br>
-        Tsinghua University, Beijing
-      </p>
-      <nav class="links" aria-label="Contact and profiles">
-        <a href="mailto:zhangyic23@mails.tsinghua.edu.cn">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
-          Email
-        </a>
-        <a href="https://github.com/zycccishere">
-          <svg class="icon icon-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>
-          GitHub
-        </a>
-        <a href="assets/Yicheng_Zhang_CV.pdf">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg>
-          CV
-        </a>
+  <!-- Icon sprite -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></symbol>
+    <symbol id="i-github" viewBox="0 0 16 16"><path class="fill" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12M3.3 7l7.7 4.73a2 2 0 0 0 2 0L20.7 7"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  </svg>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">Yicheng Zhang</a>
+      <nav class="topnav" aria-label="Sections">
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#honors">Honors</a>
+        <a class="topnav-cv" href="assets/Yicheng_Zhang_CV.pdf">CV</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I am an undergraduate student in the Department of Computer Science and Technology
-        at <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>.
-        I am interested in making large models faster and cheaper, at both the architecture
-        and the systems level, and in AI systems that can help build better AI.
-      </p>
-      <ul class="interests">
-        <li><strong>Efficient Model Architecture</strong> <span class="muted">— sparse attention, quantization</span></li>
-        <li><strong>Machine Learning Systems</strong> <span class="muted">— CUDA / Triton kernel optimization</span></li>
-        <li><strong>Recursive Self-Improvement</strong> <span class="muted">— AI systems that build better AI</span></li>
-      </ul>
+  <main class="page" id="top">
+
+    <!-- ============================== Hero ============================== -->
+    <section class="hero" aria-label="About">
+      <div class="hero-text">
+        <h1>Yicheng Zhang</h1>
+        <p class="tagline">Undergraduate Student, Tsinghua University · Intern, Z.ai</p>
+
+        <p>
+          I am an undergraduate student in the Department of Computer Science and Technology at
+          <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>, and currently an intern at
+          <a href="https://z.ai/">Z.ai</a>.
+        </p>
+        <p>
+          I study how foundation models can tackle harder, longer-horizon problems — and how to
+          measure that honestly. My work spans <strong>post-training and evaluation for frontier
+          long-horizon tasks</strong>, such as AI agents doing ML research; the <strong>mechanisms of
+          multimodal encoding</strong>, i.e. how vision-language models read images and text together;
+          and <strong>efficient attention and ML systems</strong>.
+        </p>
+
+        <ul class="tags" aria-label="Research interests">
+          <li>Long-Horizon Agents</li>
+          <li>Post-Training &amp; Evaluation</li>
+          <li>Multimodal Encoding</li>
+          <li>Efficient Attention</li>
+          <li>ML Systems</li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn" href="mailto:zhangyic23@mails.tsinghua.edu.cn"><svg class="icon"><use href="#i-mail"/></svg>Email</a>
+          <a class="btn" href="https://github.com/zycccishere"><svg class="icon"><use href="#i-github"/></svg>GitHub</a>
+          <a class="btn" href="assets/Yicheng_Zhang_CV.pdf"><svg class="icon"><use href="#i-file"/></svg>CV</a>
+        </div>
+      </div>
+
+      <figure class="portrait">
+        <img src="assets/img/avatar.jpg" width="640" height="640" alt="Portrait of Yicheng Zhang">
+      </figure>
     </section>
 
+    <!-- ============================== News ============================== -->
     <section id="news">
       <h2>News</h2>
       <ul class="news">
         <li>
+          <time datetime="2026-09">Sep 2026</time>
+          <p><a href="https://arxiv.org/abs/2605.08678">MLS-Bench</a> is accepted to <strong>NeurIPS 2026</strong> as an <strong>Oral</strong> presentation (top 0.4%).</p>
+        </li>
+        <li>
+          <time datetime="2026-08">Aug 2026</time>
+          <p>MLS-Bench is now used to evaluate frontier models, including
+            <a href="https://huggingface.co/moonshotai/Kimi-K2.7-Code">Kimi-K2.7-Code</a>,
+            <a href="https://www.kimi.com/blog/kimi-k3">Kimi K3</a> and
+            <a href="https://qwen.ai/blog?id=qwen3.8">Qwen3.8-Max</a>.</p>
+        </li>
+        <li>
+          <time datetime="2026-07">Jul 2026</time>
+          <p><a href="https://arxiv.org/abs/2605.15300">Deep Pre-Alignment for VLMs</a> is presented at <strong>ICML 2026</strong>.</p>
+        </li>
+        <li>
           <time datetime="2026-05">May 2026</time>
-          <span><a href="https://github.com/Imbernoulli/MLS-Bench">MLS-Bench</a> received the <strong>Honorable Mention Award</strong> at the ICML 2026 AI for Math Workshop.</span>
+          <p>Joined <a href="https://z.ai/">Z.ai</a> as an intern.</p>
         </li>
         <li>
-          <time datetime="2025-12">Dec 2025</time>
-          <span>Our team won <strong>1st place</strong> (out of 48 teams) in the Tsinghua Student Supercomputing Challenge.</span>
+          <time datetime="2026-05">May 2026</time>
+          <p>MLS-Bench receives the <strong>Honorable Mention Award</strong> at the ICML 2026 AI for Math Workshop.</p>
         </li>
-        <li>
-          <time datetime="2025-11">Nov 2025</time>
-          <span>Our <a href="https://attention-survey.github.io/">survey of efficient attention methods</a> is out, under review at IEEE TPAMI.</span>
+      </ul>
+      <details class="news-more">
+        <summary>Older news</summary>
+        <ul class="news">
+          <li>
+            <time datetime="2025-12">Dec 2025</time>
+            <p>Our team wins <strong>1st place</strong> (out of 48 teams) in the Tsinghua Student Supercomputing Challenge.</p>
+          </li>
+          <li>
+            <time datetime="2025-08">Aug 2025</time>
+            <p>Our <a href="https://attention-survey.github.io/">survey of efficient attention methods</a> is released.</p>
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- ========================== Publications ========================== -->
+    <section id="publications">
+      <input type="radio" name="pubs-view" id="pubs-selected" class="sr-only" checked>
+      <input type="radio" name="pubs-view" id="pubs-all" class="sr-only">
+
+      <div class="section-head">
+        <h2>Publications</h2>
+        <div class="seg" aria-label="Filter publications">
+          <label for="pubs-selected">Selected</label>
+          <label for="pubs-all">All <span class="count">4</span></label>
+        </div>
+      </div>
+      <p class="legend">Grouped by research track · * equal contribution</p>
+
+      <!-- Track 1 -->
+      <div class="track has-selected">
+        <h3 class="track-head">
+          <span class="track-num">01</span>
+          <span class="track-name">Frontier Long-Horizon Tasks</span>
+          <span class="track-sub">Post-Training &amp; Evaluation</span>
+        </h3>
+        <ol class="pubs">
+          <li class="pub is-selected">
+            <a class="pub-thumb has-art" href="https://mls-bench.com/" tabindex="-1" aria-hidden="true">
+              <!--art:mls-bench--><svg class="art" viewBox="0 0 320 220" role="img" aria-label="MLS-Bench: 140 research tasks across 12 domains; AI agents mostly fall short of human state-of-the-art methods."><rect class="art-bg" width="320" height="220"/><g class="tile"><rect x="26" y="20" width="60" height="38" rx="8"/><rect class="bar-h" x="35" y="31" width="42" height="6" rx="3"/><rect class="bar-a a-grow" style="--d:0.00s" x="35" y="41" width="29" height="6" rx="3"/></g><g class="tile"><rect x="95" y="20" width="60" height="38" rx="8"/><rect class="bar-h" x="104" y="31" width="40" height="6" rx="3"/><rect class="bar-a a-grow" style="--d:0.04s" x="104" y="41" width="33" height="6" rx="3"/></g><g class="tile"><rect x="164" y="20" width="60" height="38" rx="8"/><rect class="bar-h" x="173" y="31" width="42" height="6" rx="3"/><rect class="bar-a a-grow" style="--d:0.08s" x="173" y="41" width="22" height="6" rx="3"/></g><g class="tile"><rect x="233" y="20" width="60" height="38" rx="8"/><rect class="bar-h" x="242" y="31" width="38" height="6" rx="3"/><rect class="bar-a a-grow" style="--d:0.12s" x="242" y="41" width="31" height="6" rx="3"/></g><g class="tile"><rect x="26" y="67" width="60" height="38" rx="8"/><rect class="bar-h" x="35" y="78" width="42" height="6" rx="3"/><rect class="bar-a a-grow" style="--d:0.16s" x="35" y="88" width="35" height="6" rx="3"/></g><g class="tile"><rect x="95" y="67" width="60" height="38" rx="8"/><rect class="bar-h" x="104" y="78" width="41" height="6" rx="3"/><rect class="bar-a a-grow" style="--d:0.20s" x="104" y="88" width="26" height="6" rx="3"/></g><g class="tile tile-hl"><rect x="164" y="67" width="60" height="38" rx="8"/><text x="194.0" y="91">ML Sys</text></g><g class="tile"><rect x="233" y="67" width="60" height="38" rx="8"/><rect class="bar-h" x="242" y="78" width="39" height="6" rx="3"/><rect class="bar-a a-grow" style="--d:0.28s" x="242" y="88" width="21" height="6" rx="3"/></g><g class="tile"><rect x="26" y="114" width="60" height="38" rx="8"/><rect class="bar-h" x="35" y="125" width="42" height="6" rx="3"/><rect class="bar-a a-grow" style="--d:0.32s" x="35" y="135" width="28" height="6" rx="3"/></g><g class="tile"><rect x="95" y="114" width="60" height="38" rx="8"/><rect class="bar-h" x="104" y="125" width="36" height="6" rx="3"/><rect class="bar-a a-grow" style="--d:0.36s" x="104" y="135" width="39" height="6" rx="3"/></g><g class="tile"><rect x="164" y="114" width="60" height="38" rx="8"/><rect class="bar-h" x="173" y="125" width="42" height="6" rx="3"/><rect class="bar-a a-grow" style="--d:0.40s" x="173" y="135" width="25" height="6" rx="3"/></g><g class="tile"><rect x="233" y="114" width="60" height="38" rx="8"/><rect class="bar-h" x="242" y="125" width="38" height="6" rx="3"/><rect class="bar-a a-grow" style="--d:0.44s" x="242" y="135" width="30" height="6" rx="3"/></g><rect class="bar-h" x="76" y="173" width="14" height="6" rx="3"/><text class="art-note n-f" x="96" y="179.5" text-anchor="start">human SOTA</text><rect class="bar-a" x="186" y="173" width="14" height="6" rx="3"/><text class="art-note n-f" x="206" y="179.5" text-anchor="start">AI agent</text><text class="art-title" x="160" y="206" text-anchor="middle">140 research tasks · 12 domains</text></svg><!--/art:mls-bench-->
+            </a>
+            <div class="pub-body">
+              <div class="pub-tags">
+                <span class="venue">NeurIPS 2026</span>
+                <span class="badge badge-oral">Oral · Top 0.4%</span>
+              </div>
+              <h4 class="pub-title"><a href="https://arxiv.org/abs/2605.08678">MLS-Bench: A Holistic and Rigorous Assessment of AI Systems on Building Better AI</a></h4>
+              <p class="pub-authors">Bohan Lyu*, Yucheng Yang*, Siqiao Huang*, Jiaru Zhang*, Qixin Xu*, <span class="me">Yicheng Zhang</span>*, et al.</p>
+              <p class="pub-venue">NeurIPS 2026, Evaluations &amp; Datasets Track</p>
+              <p class="pub-tldr">Can AI agents <em>invent</em> ML methods that generalize and scale — not just tune a pipeline? 140 research tasks across 12 domains, each with reproduced SOTA baselines. Frontier agents still fall short of the best human methods. I led the ML Systems &amp; Efficient ML tasks.</p>
+              <ul class="pub-stats">
+                <li><b>140</b> tasks · 12 domains</li>
+                <li>Adopted by <b>Kimi K3</b> &amp; <b>Qwen3.8-Max</b></li>
+                <li><svg class="icon"><use href="#i-trophy"/></svg>ICML AI4Math Honorable Mention</li>
+              </ul>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2605.08678"><svg class="icon"><use href="#i-file"/></svg>arXiv</a>
+                <a href="https://mls-bench.com/"><svg class="icon"><use href="#i-globe"/></svg>Website</a>
+                <a href="https://github.com/Imbernoulli/MLS-Bench"><svg class="icon"><use href="#i-code"/></svg>Code</a>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Track 2 -->
+      <div class="track has-selected">
+        <h3 class="track-head">
+          <span class="track-num">02</span>
+          <span class="track-name">Multimodal Encoding Mechanisms</span>
+          <span class="track-sub">How foundation models see</span>
+        </h3>
+        <ol class="pubs">
+          <li class="pub is-selected">
+            <a class="pub-thumb has-art" href="https://second-look-vlm.com/" tabindex="-1" aria-hidden="true">
+              <!--art:second-look--><svg class="art" viewBox="0 0 320 220" role="img" aria-label="Second-Look Prompting: the image and question are replayed; the second image attends to the question and the second question reads it."><rect class="art-bg" width="320" height="220"/><text class="art-title" x="20" y="34">⟨V,T⟩ → ⟨V,T,V,T⟩</text><g class="art-badge" transform="translate(228 17)"><rect width="76" height="25" rx="12.5"/><text x="38" y="17">12 / 12 ↑</text></g><g class="blk b-v"><rect x="20" y="96" width="62" height="46" rx="11"/><text x="51" y="126">V<tspan dy="4">1</tspan></text></g><g class="blk b-t"><rect x="92" y="96" width="62" height="46" rx="11"/><text x="123" y="126">T<tspan dy="4">1</tspan></text></g><g class="blk b-v strong a-pop" style="--d:0.08s"><rect x="164" y="96" width="62" height="46" rx="11"/><text x="195" y="126">V<tspan dy="4">2</tspan></text></g><g class="blk b-t strong a-pop" style="--d:0.22s"><rect x="236" y="96" width="62" height="46" rx="11"/><text x="267" y="126">T<tspan dy="4">2</tspan></text></g><path class="arc arc-g a-draw" d="M195 96 C195 58 123 58 123 96"/><path class="arc arc-g" d="M117.5 88 L123 96 L128.5 88"/><text class="art-note n-g" x="159" y="56">question-guided look</text><path class="arc arc-a a-draw" style="--d:.45s" d="M267 142 C267 180 195 180 195 142"/><path class="arc arc-a" d="M189.5 150 L195 142 L200.5 150"/><text class="art-note n-a" x="231" y="200">reads the scratchpad</text><text class="art-note n-f" x="87" y="168">standard prompt</text><path class="art-brace" d="M22 152 V156 H152 V152"/></svg><!--/art:second-look-->
+            </a>
+            <div class="pub-body">
+              <div class="pub-tags">
+                <span class="venue venue-muted">Preprint</span>
+                <span class="badge badge-first">First author</span>
+              </div>
+              <h4 class="pub-title"><a href="https://second-look-vlm.com/">Replay Before You Reply: Second-Look Prompting for Unified Multimodal Encoding</a></h4>
+              <p class="pub-authors"><span class="me">Yicheng Zhang</span>, Xun Zhang, Jingyuan Ma, Tianyu Yu, Yuan Yao</p>
+              <p class="pub-venue">Preprint, 2026</p>
+              <p class="pub-tldr">Under causal attention, whichever modality comes first is encoded blind to the other. Replaying the image–question pair lets every token see the full input — training-free. The second image acts as a <em>prefill scratchpad</em>: even a blank one can improve reasoning.</p>
+              <ul class="pub-stats">
+                <li><b>12 / 12</b> VLMs improve</li>
+                <li><b>+5.6</b> on MATH-Vision (Gemini 3 Flash)</li>
+                <li><b>≤ 0.16 s</b> avg. latency change</li>
+              </ul>
+              <div class="pub-links">
+                <a href="https://second-look-vlm.com/"><svg class="icon"><use href="#i-globe"/></svg>Website</a>
+              </div>
+            </div>
+          </li>
+          <li class="pub">
+            <a class="pub-thumb has-art" href="https://arxiv.org/abs/2605.15300" tabindex="-1" aria-hidden="true">
+              <!--art:deep-pre-alignment--><svg class="art" viewBox="0 0 320 220" role="img" aria-label="Deep Pre-Alignment: a small VLM replaces the projector, so visual tokens reach the LLM already aligned with its text space."><rect class="art-bg" width="320" height="220"/><text class="art-note n-f" x="20" y="30" text-anchor="start">LLaVA-style</text><g class="img-glyph"><rect x="20" y="40" width="32" height="34" rx="7"/><path d="M25 67 L32 57 L37 63 L40 60 L47 67 Z"/><circle cx="41" cy="50" r="2.6"/></g><path class="arrow" d="M53 57 H59 M56 54 L59 57 L56 60"/><path class="arrow" d="M109 57 H115 M112 54 L115 57 L112 60"/><path class="arrow" d="M183 57 H189 M186 54 L189 57 L186 60"/><g class="blk b-n"><rect x="60" y="40" width="48" height="34" rx="8"/><text class="sm" x="84" y="61.5">ViT</text></g><g class="blk b-n"><rect x="116" y="40" width="66" height="34" rx="8"/><text class="sm" x="149" y="61.5">Projector</text></g><rect class="tok tok-v a-flow" style="--d:0.0s" x="192" y="52.5" width="9" height="9" rx="2"/><rect class="tok tok-v a-flow" style="--d:0.1s" x="204" y="52.5" width="9" height="9" rx="2"/><rect class="tok tok-v a-flow" style="--d:0.2s" x="216" y="52.5" width="9" height="9" rx="2"/><g class="blk b-t"><rect x="230" y="40" width="70" height="34" rx="8"/><text x="265" y="62">LLM</text></g><path class="mark-bad" d="M201 29 L211 39 M211 29 L201 39"/><text class="art-note n-v" x="20" y="120" text-anchor="start">Deep Pre-Alignment</text><g class="img-glyph"><rect x="20" y="130" width="32" height="34" rx="7"/><path d="M25 157 L32 147 L37 153 L40 150 L47 157 Z"/><circle cx="41" cy="140" r="2.6"/></g><path class="arrow" d="M53 147 H59 M56 144 L59 147 L56 150"/><path class="arrow" d="M109 147 H115 M112 144 L115 147 L112 150"/><path class="arrow" d="M183 147 H189 M186 144 L189 147 L186 150"/><g class="blk b-n"><rect x="60" y="130" width="48" height="34" rx="8"/><text class="sm" x="84" y="151.5">ViT</text></g><g class="blk b-v"><rect x="116" y="130" width="66" height="34" rx="8"/><text class="sm" x="149" y="151.5">Small VLM</text></g><rect class="tok tok-t a-flow" style="--d:0.0s" x="192" y="142.5" width="9" height="9" rx="2"/><rect class="tok tok-t a-flow" style="--d:0.1s" x="204" y="142.5" width="9" height="9" rx="2"/><rect class="tok tok-t a-flow" style="--d:0.2s" x="216" y="142.5" width="9" height="9" rx="2"/><g class="blk b-t"><rect x="230" y="130" width="70" height="34" rx="8"/><text x="265" y="152">LLM</text></g><path class="mark-ok" d="M199 123 L204 128 L213 118"/><text class="art-note n-f" x="160" y="204">visual tokens arrive in the text space</text></svg><!--/art:deep-pre-alignment-->
+            </a>
+            <div class="pub-body">
+              <div class="pub-tags">
+                <span class="venue">ICML 2026</span>
+              </div>
+              <h4 class="pub-title"><a href="https://arxiv.org/abs/2605.15300">Deep Pre-Alignment for VLMs</a></h4>
+              <p class="pub-authors">Tianyu Yu, Kechen Fang, Zihao Wan, Kaidong Zhang, <span class="me">Yicheng Zhang</span>, Jun Song, Bo Zheng, Yuan Yao</p>
+              <p class="pub-venue">International Conference on Machine Learning (ICML), 2026</p>
+              <p class="pub-tldr">Swaps the ViT encoder for a small VLM as the perceiver, so visual features reach the LLM already aligned with its text space — instead of spending the LLM's early layers on alignment.</p>
+              <ul class="pub-stats">
+                <li><b>+1.9</b> @ 4B · <b>+3.0</b> @ 32B</li>
+                <li><b>−32.9%</b> language forgetting</li>
+              </ul>
+              <div class="pub-links">
+                <a href="https://arxiv.org/abs/2605.15300"><svg class="icon"><use href="#i-file"/></svg>arXiv</a>
+                <a href="https://github.com/THUMAI-Lab/Deep-Pre-Alignment"><svg class="icon"><use href="#i-code"/></svg>Code</a>
+                <a href="https://huggingface.co/collections/team6013/dpa"><svg class="icon"><use href="#i-box"/></svg>Models</a>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Track 3 -->
+      <div class="track">
+        <h3 class="track-head">
+          <span class="track-num">03</span>
+          <span class="track-name">Efficient Attention &amp; ML Systems</span>
+          <span class="track-sub">Sparse attention, kernels</span>
+        </h3>
+        <ol class="pubs">
+          <li class="pub">
+            <a class="pub-thumb has-art" href="https://attention-survey.github.io/" tabindex="-1" aria-hidden="true">
+              <!--art:attention-survey--><svg class="art" viewBox="0 0 320 220" role="img" aria-label="Efficient attention taxonomy: hardware-efficient, sparse, compact and linear attention."><rect class="art-bg" width="320" height="220"/><rect class="c-n" x="56" y="18" width="8" height="8" rx="1.5"/><rect class="c-n" x="66" y="18" width="8" height="8" rx="1.5"/><rect class="c-n" x="76" y="18" width="8" height="8" rx="1.5"/><rect class="c-n" x="86" y="18" width="8" height="8" rx="1.5"/><rect class="c-n" x="96" y="18" width="8" height="8" rx="1.5"/><rect class="c-n" x="106" y="18" width="8" height="8" rx="1.5"/><rect class="c-n" x="56" y="28" width="8" height="8" rx="1.5"/><rect class="c-n" x="66" y="28" width="8" height="8" rx="1.5"/><rect class="c-n" x="76" y="28" width="8" height="8" rx="1.5"/><rect class="c-n" x="86" y="28" width="8" height="8" rx="1.5"/><rect class="c-n" x="96" y="28" width="8" height="8" rx="1.5"/><rect class="c-n" x="106" y="28" width="8" height="8" rx="1.5"/><rect class="c-n" x="56" y="38" width="8" height="8" rx="1.5"/><rect class="c-n" x="66" y="38" width="8" height="8" rx="1.5"/><rect class="c-n" x="76" y="38" width="8" height="8" rx="1.5"/><rect class="c-n" x="86" y="38" width="8" height="8" rx="1.5"/><rect class="c-n" x="96" y="38" width="8" height="8" rx="1.5"/><rect class="c-n" x="106" y="38" width="8" height="8" rx="1.5"/><rect class="c-n" x="56" y="48" width="8" height="8" rx="1.5"/><rect class="c-n" x="66" y="48" width="8" height="8" rx="1.5"/><rect class="c-n" x="76" y="48" width="8" height="8" rx="1.5"/><rect class="c-n" x="86" y="48" width="8" height="8" rx="1.5"/><rect class="c-n" x="96" y="48" width="8" height="8" rx="1.5"/><rect class="c-n" x="106" y="48" width="8" height="8" rx="1.5"/><rect class="c-n" x="56" y="58" width="8" height="8" rx="1.5"/><rect class="c-n" x="66" y="58" width="8" height="8" rx="1.5"/><rect class="c-n" x="76" y="58" width="8" height="8" rx="1.5"/><rect class="c-n" x="86" y="58" width="8" height="8" rx="1.5"/><rect class="c-n" x="96" y="58" width="8" height="8" rx="1.5"/><rect class="c-n" x="106" y="58" width="8" height="8" rx="1.5"/><rect class="c-n" x="56" y="68" width="8" height="8" rx="1.5"/><rect class="c-n" x="66" y="68" width="8" height="8" rx="1.5"/><rect class="c-n" x="76" y="68" width="8" height="8" rx="1.5"/><rect class="c-n" x="86" y="68" width="8" height="8" rx="1.5"/><rect class="c-n" x="96" y="68" width="8" height="8" rx="1.5"/><rect class="c-n" x="106" y="68" width="8" height="8" rx="1.5"/><text class="art-note n-f" x="85" y="92">Hardware</text><rect class="tile-outline" x="55" y="17" width="20" height="20" rx="3"/><rect class="tile-outline" x="75" y="17" width="20" height="20" rx="3"/><rect class="tile-outline" x="95" y="17" width="20" height="20" rx="3"/><rect class="tile-outline" x="55" y="37" width="20" height="20" rx="3"/><rect class="tile-outline" x="75" y="37" width="20" height="20" rx="3"/><rect class="tile-outline" x="95" y="37" width="20" height="20" rx="3"/><rect class="tile-outline" x="55" y="57" width="20" height="20" rx="3"/><rect class="tile-outline" x="75" y="57" width="20" height="20" rx="3"/><rect class="tile-outline" x="95" y="57" width="20" height="20" rx="3"/><rect class="tile-cur a-tile" x="55" y="17" width="20" height="20" rx="3"/><rect class="c-v" x="206" y="18" width="8" height="8" rx="1.5"/><rect class="c-empty" x="216" y="18" width="8" height="8" rx="1.5"/><rect class="c-empty" x="226" y="18" width="8" height="8" rx="1.5"/><rect class="c-empty" x="236" y="18" width="8" height="8" rx="1.5"/><rect class="c-empty" x="246" y="18" width="8" height="8" rx="1.5"/><rect class="c-empty" x="256" y="18" width="8" height="8" rx="1.5"/><rect class="c-v" x="206" y="28" width="8" height="8" rx="1.5"/><rect class="c-v" x="216" y="28" width="8" height="8" rx="1.5"/><rect class="c-empty" x="226" y="28" width="8" height="8" rx="1.5"/><rect class="c-empty" x="236" y="28" width="8" height="8" rx="1.5"/><rect class="c-empty" x="246" y="28" width="8" height="8" rx="1.5"/><rect class="c-empty" x="256" y="28" width="8" height="8" rx="1.5"/><rect class="c-v" x="206" y="38" width="8" height="8" rx="1.5"/><rect class="c-v" x="216" y="38" width="8" height="8" rx="1.5"/><rect class="c-v" x="226" y="38" width="8" height="8" rx="1.5"/><rect class="c-empty" x="236" y="38" width="8" height="8" rx="1.5"/><rect class="c-empty" x="246" y="38" width="8" height="8" rx="1.5"/><rect class="c-empty" x="256" y="38" width="8" height="8" rx="1.5"/><rect class="c-v" x="206" y="48" width="8" height="8" rx="1.5"/><rect class="c-empty" x="216" y="48" width="8" height="8" rx="1.5"/><rect class="c-v" x="226" y="48" width="8" height="8" rx="1.5"/><rect class="c-v" x="236" y="48" width="8" height="8" rx="1.5"/><rect class="c-empty" x="246" y="48" width="8" height="8" rx="1.5"/><rect class="c-empty" x="256" y="48" width="8" height="8" rx="1.5"/><rect class="c-v" x="206" y="58" width="8" height="8" rx="1.5"/><rect class="c-empty" x="216" y="58" width="8" height="8" rx="1.5"/><rect class="c-empty" x="226" y="58" width="8" height="8" rx="1.5"/><rect class="c-v" x="236" y="58" width="8" height="8" rx="1.5"/><rect class="c-v" x="246" y="58" width="8" height="8" rx="1.5"/><rect class="c-empty" x="256" y="58" width="8" height="8" rx="1.5"/><rect class="c-v" x="206" y="68" width="8" height="8" rx="1.5"/><rect class="c-empty" x="216" y="68" width="8" height="8" rx="1.5"/><rect class="c-empty" x="226" y="68" width="8" height="8" rx="1.5"/><rect class="c-empty" x="236" y="68" width="8" height="8" rx="1.5"/><rect class="c-v" x="246" y="68" width="8" height="8" rx="1.5"/><rect class="c-v" x="256" y="68" width="8" height="8" rx="1.5"/><text class="art-note n-v strong-lbl" x="235" y="92">Sparse</text><rect class="c-t" x="56" y="116" width="8" height="8" rx="1.5"/><rect class="c-t" x="66" y="116" width="8" height="8" rx="1.5"/><rect class="c-empty" x="76" y="116" width="8" height="8" rx="1.5"/><rect class="c-empty" x="86" y="116" width="8" height="8" rx="1.5"/><rect class="c-empty" x="96" y="116" width="8" height="8" rx="1.5"/><rect class="c-empty" x="106" y="116" width="8" height="8" rx="1.5"/><rect class="c-t" x="56" y="126" width="8" height="8" rx="1.5"/><rect class="c-t" x="66" y="126" width="8" height="8" rx="1.5"/><rect class="c-empty" x="76" y="126" width="8" height="8" rx="1.5"/><rect class="c-empty" x="86" y="126" width="8" height="8" rx="1.5"/><rect class="c-empty" x="96" y="126" width="8" height="8" rx="1.5"/><rect class="c-empty" x="106" y="126" width="8" height="8" rx="1.5"/><rect class="c-t" x="56" y="136" width="8" height="8" rx="1.5"/><rect class="c-t" x="66" y="136" width="8" height="8" rx="1.5"/><rect class="c-empty" x="76" y="136" width="8" height="8" rx="1.5"/><rect class="c-empty" x="86" y="136" width="8" height="8" rx="1.5"/><rect class="c-empty" x="96" y="136" width="8" height="8" rx="1.5"/><rect class="c-empty" x="106" y="136" width="8" height="8" rx="1.5"/><rect class="c-t" x="56" y="146" width="8" height="8" rx="1.5"/><rect class="c-t" x="66" y="146" width="8" height="8" rx="1.5"/><rect class="c-empty" x="76" y="146" width="8" height="8" rx="1.5"/><rect class="c-empty" x="86" y="146" width="8" height="8" rx="1.5"/><rect class="c-empty" x="96" y="146" width="8" height="8" rx="1.5"/><rect class="c-empty" x="106" y="146" width="8" height="8" rx="1.5"/><rect class="c-t" x="56" y="156" width="8" height="8" rx="1.5"/><rect class="c-t" x="66" y="156" width="8" height="8" rx="1.5"/><rect class="c-empty" x="76" y="156" width="8" height="8" rx="1.5"/><rect class="c-empty" x="86" y="156" width="8" height="8" rx="1.5"/><rect class="c-empty" x="96" y="156" width="8" height="8" rx="1.5"/><rect class="c-empty" x="106" y="156" width="8" height="8" rx="1.5"/><rect class="c-t" x="56" y="166" width="8" height="8" rx="1.5"/><rect class="c-t" x="66" y="166" width="8" height="8" rx="1.5"/><rect class="c-empty" x="76" y="166" width="8" height="8" rx="1.5"/><rect class="c-empty" x="86" y="166" width="8" height="8" rx="1.5"/><rect class="c-empty" x="96" y="166" width="8" height="8" rx="1.5"/><rect class="c-empty" x="106" y="166" width="8" height="8" rx="1.5"/><text class="art-note n-f" x="85" y="190">Compact</text><rect class="c-t" x="206" y="116" width="8" height="8" rx="1.5"/><rect class="c-t" x="216" y="116" width="8" height="8" rx="1.5"/><rect class="c-t" x="226" y="116" width="8" height="8" rx="1.5"/><rect class="c-empty" x="236" y="116" width="8" height="8" rx="1.5"/><rect class="c-empty" x="246" y="116" width="8" height="8" rx="1.5"/><rect class="c-empty" x="256" y="116" width="8" height="8" rx="1.5"/><rect class="c-t" x="206" y="126" width="8" height="8" rx="1.5"/><rect class="c-t" x="216" y="126" width="8" height="8" rx="1.5"/><rect class="c-t" x="226" y="126" width="8" height="8" rx="1.5"/><rect class="c-empty" x="236" y="126" width="8" height="8" rx="1.5"/><rect class="c-empty" x="246" y="126" width="8" height="8" rx="1.5"/><rect class="c-empty" x="256" y="126" width="8" height="8" rx="1.5"/><rect class="c-t" x="206" y="136" width="8" height="8" rx="1.5"/><rect class="c-t" x="216" y="136" width="8" height="8" rx="1.5"/><rect class="c-t" x="226" y="136" width="8" height="8" rx="1.5"/><rect class="c-empty" x="236" y="136" width="8" height="8" rx="1.5"/><rect class="c-empty" x="246" y="136" width="8" height="8" rx="1.5"/><rect class="c-empty" x="256" y="136" width="8" height="8" rx="1.5"/><rect class="c-empty" x="206" y="146" width="8" height="8" rx="1.5"/><rect class="c-empty" x="216" y="146" width="8" height="8" rx="1.5"/><rect class="c-empty" x="226" y="146" width="8" height="8" rx="1.5"/><rect class="c-empty" x="236" y="146" width="8" height="8" rx="1.5"/><rect class="c-empty" x="246" y="146" width="8" height="8" rx="1.5"/><rect class="c-empty" x="256" y="146" width="8" height="8" rx="1.5"/><rect class="c-empty" x="206" y="156" width="8" height="8" rx="1.5"/><rect class="c-empty" x="216" y="156" width="8" height="8" rx="1.5"/><rect class="c-empty" x="226" y="156" width="8" height="8" rx="1.5"/><rect class="c-empty" x="236" y="156" width="8" height="8" rx="1.5"/><rect class="c-empty" x="246" y="156" width="8" height="8" rx="1.5"/><rect class="c-empty" x="256" y="156" width="8" height="8" rx="1.5"/><rect class="c-empty" x="206" y="166" width="8" height="8" rx="1.5"/><rect class="c-empty" x="216" y="166" width="8" height="8" rx="1.5"/><rect class="c-empty" x="226" y="166" width="8" height="8" rx="1.5"/><rect class="c-empty" x="236" y="166" width="8" height="8" rx="1.5"/><rect class="c-empty" x="246" y="166" width="8" height="8" rx="1.5"/><rect class="c-empty" x="256" y="166" width="8" height="8" rx="1.5"/><text class="art-note n-f" x="235" y="190">Linear</text><path class="divider" d="M160 22 V186 M36 108 H284"/></svg><!--/art:attention-survey-->
+            </a>
+            <div class="pub-body">
+              <div class="pub-tags">
+                <span class="venue venue-muted">TPAMI · Under Review</span>
+              </div>
+              <h4 class="pub-title"><a href="https://attention-survey.github.io/">Efficient Attention Methods: Hardware-efficient, Sparse, Compact, and Linear Attention</a></h4>
+              <p class="pub-authors">Jintao Zhang, Rundong Su, Chunyu Liu, Jia Wei, …, <span class="me">Yicheng Zhang</span>, et al.</p>
+              <p class="pub-venue">Under review at IEEE TPAMI, 2025</p>
+              <p class="pub-tldr">A unified taxonomy of efficient attention — hardware-efficient, sparse, compact and linear — with an analysis framework for each. I wrote the sparse attention section.</p>
+              <div class="pub-links">
+                <a href="https://attention-survey.github.io/files/Attention_Survey.pdf"><svg class="icon"><use href="#i-file"/></svg>Paper</a>
+                <a href="https://attention-survey.github.io/"><svg class="icon"><use href="#i-globe"/></svg>Website</a>
+                <a href="https://github.com/attention-survey/Efficient_Attention_Survey"><svg class="icon"><use href="#i-code"/></svg>Code</a>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================ Experience ============================ -->
+    <section id="experience">
+      <h2>Experience &amp; Education</h2>
+      <ul class="timeline">
+        <li class="tl-item">
+          <span class="tl-mark" aria-hidden="true">Z</span>
+          <div class="tl-body">
+            <div class="tl-head">
+              <h3><a href="https://z.ai/">Z.ai</a></h3>
+              <span class="when">May 2026 – Present</span>
+            </div>
+            <p class="tl-role">Intern</p>
+          </div>
+        </li>
+        <li class="tl-item">
+          <span class="tl-mark" aria-hidden="true">T</span>
+          <div class="tl-body">
+            <div class="tl-head">
+              <h3><a href="https://www.cs.tsinghua.edu.cn/csen/">Tsinghua University</a></h3>
+              <span class="when">Aug 2023 – Present</span>
+            </div>
+            <p class="tl-role">B.Eng. in Computer Science and Technology</p>
+            <p class="tl-note">GPA 3.96 / 4.0 · Rank 6 / 173</p>
+          </div>
         </li>
       </ul>
     </section>
 
-    <section id="publications">
-      <h2>Publications</h2>
-      <p class="legend">* equal contribution</p>
-      <ol class="pubs">
-        <li class="pub">
-          <h3 class="pub-title">MLS-Bench: A Holistic and Rigorous Assessment of AI Systems on Building Better AI</h3>
-          <p class="pub-authors">Bohan Lyu*, Yucheng Yang*, Siqiao Huang*, Jiaru Zhang*, Qixin Xu*, <span class="me">Yicheng Zhang</span>*, et al.</p>
-          <p class="pub-venue"><em>ICML 2026 AI for Math Workshop</em>, 2026 <span class="award">Honorable Mention Award</span></p>
-          <p class="pub-note">A benchmark that evaluates LLM agents on real ML research tasks, adopted by Kimi-K2.7-Code, Kimi-K3 and Qwen3.8-Max. I led the ML Systems &amp; Efficient ML track.</p>
-          <p class="pub-links"><a class="pill" href="https://github.com/Imbernoulli/MLS-Bench">Code</a></p>
-        </li>
-        <li class="pub">
-          <h3 class="pub-title">Second-Look Prompting Improves Vision-Language Models</h3>
-          <p class="pub-authors"><span class="me">Yicheng Zhang</span>, Xun Zhang, Jingyuan Ma, Tianyu Yu, Yuan Yao</p>
-          <p class="pub-venue"><em>Preprint</em>, 2026</p>
-          <p class="pub-note">A training-free method that repeats the image–question sequence to enable question-aware visual processing, improving all 12 evaluated VLMs across 12 reasoning and perception benchmarks.</p>
-          <p class="pub-links"><a class="pill" href="https://second-look-vlm.com/">Project Page</a></p>
-        </li>
-        <li class="pub">
-          <h3 class="pub-title">A Survey of Efficient Attention Methods: Hardware-efficient, Sparse, Compact, and Linear Attention</h3>
-          <p class="pub-authors">Jintao Zhang, Rundong Su, Chunyu Liu, Jia Wei, …, <span class="me">Yicheng Zhang</span>, et al.</p>
-          <p class="pub-venue"><em>Under review at IEEE TPAMI</em>, 2025</p>
-          <p class="pub-note">A taxonomy of efficient attention from four perspectives: hardware efficiency, sparsity, compactness and linearity. I wrote the sparse attention section.</p>
-          <p class="pub-links"><a class="pill" href="https://attention-survey.github.io/">Project Page</a></p>
-        </li>
-      </ol>
-    </section>
-
+    <!-- ============================== Honors ============================== -->
     <section id="honors">
       <h2>Honors &amp; Awards</h2>
-      <ul class="entries">
-        <li class="entry">
+      <ul class="dated">
+        <li>
+          <time>2026</time>
+          <div>
+            <strong>Honorable Mention Award</strong>, ICML 2026 AI for Math Workshop <span class="muted">(MLS-Bench)</span>
+          </div>
+        </li>
+        <li>
+          <time>2025</time>
           <div>
             <strong>Champion (1st / 48 teams)</strong>, Tsinghua Student Supercomputing Challenge
             <p class="sub">Led the GPU optimization track; implemented high-performance attention kernels in CUDA.</p>
           </div>
-          <span class="when">2025</span>
         </li>
-        <li class="entry">
-          <div><strong>Comprehensive Scholarship</strong>, Dept. of Computer Science and Technology, Tsinghua</div>
-          <span class="when">2025</span>
+        <li>
+          <time>2025</time>
+          <div><strong>Comprehensive Scholarship</strong>, Dept. of Computer Science and Technology, Tsinghua University</div>
         </li>
-        <li class="entry">
+        <li>
+          <time>2024</time>
           <div>
             <strong>National Scholarship</strong>, Ministry of Education of China
             <p class="sub">Top 0.2% of undergraduates nationwide.</p>
           </div>
-          <span class="when">2024</span>
         </li>
       </ul>
     </section>
 
-    <section id="education">
-      <h2>Education</h2>
-      <ul class="entries">
-        <li class="entry">
-          <div>
-            <strong>Tsinghua University</strong>, B.Eng. in Computer Science and Technology
-            <p class="sub">GPA 3.96 / 4.0 · Rank 6 / 173</p>
-          </div>
-          <span class="when">2023 – now</span>
-        </li>
-      </ul>
-    </section>
-
+    <!-- ============================ Activities ============================ -->
     <section id="activities">
       <h2>Activities</h2>
-      <ul class="entries compact">
-        <li class="entry"><div><strong>Class President</strong>, Class 34, Dept. of Computer Science</div><span class="when">2024 – 2025</span></li>
-        <li class="entry"><div><strong>Student Welfare Representative</strong>, Class 34, Dept. of Computer Science</div><span class="when">2023 – 2024</span></li>
-        <li class="entry"><div><strong>Member</strong>, Intelligent Agents Division, Student Association for Science and Technology</div><span class="when">2024 – 2026</span></li>
-        <li class="entry"><div><strong>Member</strong>, Tsinghua University Drama Troupe</div><span class="when">2024 – now</span></li>
+      <ul class="dated compact">
+        <li><time>2024 – 2025</time><div><strong>Class President</strong>, Class 34, Dept. of Computer Science and Technology</div></li>
+        <li><time>2023 – 2024</time><div><strong>Student Welfare Representative</strong>, Class 34, Dept. of Computer Science and Technology</div></li>
+        <li><time>2024 – 2026</time><div><strong>Member</strong>, Intelligent Agents Division, Student Association for Science and Technology</div></li>
+        <li><time>2024 – now</time><div><strong>Member</strong>, Tsinghua University Drama Troupe</div></li>
       </ul>
     </section>
 
     <footer class="footer">
-      <p>© 2026 Yicheng Zhang · Last updated November 2026</p>
+      <p>© 2026 Yicheng Zhang</p>
+      <p>Last updated November 2026</p>
     </footer>
 
   </main>
