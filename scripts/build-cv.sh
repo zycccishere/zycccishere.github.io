@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Build the CV from the CV/ submodule and copy the PDF into the site.
-# Requires LuaLaTeX (the CV uses babel's bidi=basic) and the Noto fonts.
+# Requires pdfLaTeX with the noto-serif / noto-sans packages.
 set -euo pipefail
 
 root="$(cd "$(dirname "$0")/.." && pwd)"
@@ -15,7 +15,7 @@ fi
 
 cd "$root/CV"
 # \cvpublic hides private contact details (phone) in the published PDF.
-if ! latexmk -lualatex -usepretex='\def\cvpublic{}' -interaction=nonstopmode -halt-on-error -outdir="$tmp" main.tex >"$tmp/build.log" 2>&1; then
+if ! latexmk -pdf -usepretex='\def\cvpublic{}' -interaction=nonstopmode -halt-on-error -outdir="$tmp" main.tex >"$tmp/build.log" 2>&1; then
   grep -E "^!" -A4 "$tmp/build.log" >&2 || tail -40 "$tmp/build.log" >&2
   exit 1
 fi
