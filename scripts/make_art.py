@@ -22,7 +22,6 @@ def svg(label, body):
 # ---------------------------------------------------------------- SLP
 def slp():
     b = []
-    b.append('<text class="art-title" x="20" y="34">⟨V,T⟩ → ⟨V,T,V,T⟩</text>')
     b.append('<g class="art-badge" transform="translate(228 17)"><rect width="76" height="25" rx="12.5"/>'
              '<text x="38" y="17">12 / 12 ↑</text></g>')
     blocks = [("v", 20, "V", "1", ""), ("t", 92, "T", "1", ""),
