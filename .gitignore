@@ -6,3 +6,4 @@ _site/
 *.fls
 *.fdb_latexmk
 *.synctex.gz
+.wrangler/
