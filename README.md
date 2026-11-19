@@ -1,17 +1,22 @@
 # zycccishere.github.io
 
-Personal academic homepage of Yicheng Zhang: <https://zycccishere.github.io/>
+Personal academic homepage of Yicheng Zhang.
+
+- Live (Cloudflare Pages): <https://yicheng-zhang.pages.dev/>
+- GitHub Pages (<https://zycccishere.github.io/>) is set up via `.github/workflows/pages.yml`
+  but currently blocked: Actions reports the account as locked for a billing issue.
 
 Plain HTML + CSS with no build step, no external fonts and no JavaScript.
 
 ```
-index.html                  the whole page
-assets/css/style.css        styles (light + dark mode)
-assets/Yicheng_Zhang_CV.pdf compiled CV (generated, see below)
+index.html                    the whole page
+assets/css/style.css          styles (light + dark mode)
+assets/Yicheng_Zhang_CV.pdf   compiled CV (generated, see below)
 assets/favicon.svg
-CV/                         git submodule -> zycccishere/CV (private)
-scripts/build-cv.sh         compiles CV/main.tex into assets/
-.github/workflows/pages.yml deploys to GitHub Pages on push to main
+CV/                           git submodule -> zycccishere/CV (private)
+scripts/build-cv.sh           compiles CV/main.tex into assets/
+scripts/deploy-cloudflare.sh  uploads the site to Cloudflare Pages
+.github/workflows/pages.yml   deploys to GitHub Pages on push to main
 ```
 
 ## Clone
@@ -22,8 +27,16 @@ git clone --recurse-submodules git@github.com:zycccishere/zycccishere.github.io.
 
 ## Editing the page
 
-Edit `index.html` and open it directly in a browser to preview. Pushing to
-`main` redeploys the site.
+Edit `index.html` and open it directly in a browser to preview. Then:
+
+```sh
+git commit -am "..." && git push   # version history (+ GitHub Pages once unblocked)
+./scripts/deploy-cloudflare.sh     # publish to Cloudflare Pages
+```
+
+Cloudflare deploys are direct uploads from this machine (no Git integration),
+so pushing alone does not update the Cloudflare site. First time only:
+`npx wrangler@4 login`.
 
 ## Updating the CV
 
@@ -40,6 +53,7 @@ cd ..
 ./scripts/build-cv.sh
 git add CV assets/Yicheng_Zhang_CV.pdf
 git commit -m "Update CV" && git push
+./scripts/deploy-cloudflare.sh
 ```
 
 To pull CV changes made elsewhere (e.g. on Overleaf): `git submodule update --remote CV`,
