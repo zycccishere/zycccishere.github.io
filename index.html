@@ -86,6 +86,7 @@
       <section id="news">
         <h2>News</h2>
         <ul class="news">
+          <li><b class="date">[Nov 2026]</b> We released the <a href="https://arxiv.org/abs/2611.30909">Second-Look Prompting preprint</a> and <a href="https://github.com/zycccishere/second-look-prompting">code</a>.</li>
           <li><b class="date">[Sep 2026]</b> <a href="https://arxiv.org/abs/2605.08678">MLS-Bench</a> is accepted to <i>NeurIPS 2026 Evaluations &amp; Datasets Track</i> as an <b class="hl">Oral</b> (top 0.4%)!</li>
           <li><b class="date">[Aug 2026]</b> MLS-Bench is adopted to evaluate <a href="https://qwen.ai/blog?id=qwen3.8">Qwen3.8-Max</a>, after <a href="https://www.kimi.com/blog/kimi-k3">Kimi K3</a> and <a href="https://huggingface.co/moonshotai/Kimi-K2.7-Code">Kimi-K2.7-Code</a>.</li>
           <li><b class="date">[Jul 2026]</b> <a href="https://arxiv.org/abs/2605.15300">Deep Pre-Alignment for VLMs</a> is presented at <i>ICML 2026</i>.</li>
@@ -137,10 +138,10 @@
               <span class="badge">Preprint</span><!--art:second-look--><svg class="art" viewBox="0 0 320 220" role="img" aria-label="Second-Look Prompting: the image and question are replayed; the second image attends to the question and the second question reads it."><rect class="art-bg" width="320" height="220"/><g class="art-badge" transform="translate(228 17)"><rect width="76" height="25" rx="12.5"/><text x="38" y="17">12 / 12 ↑</text></g><g class="blk b-v"><rect x="20" y="96" width="62" height="46" rx="11"/><text x="51" y="126">V<tspan dy="4">1</tspan></text></g><g class="blk b-t"><rect x="92" y="96" width="62" height="46" rx="11"/><text x="123" y="126">T<tspan dy="4">1</tspan></text></g><g class="blk b-v strong a-pop" style="--d:0.08s"><rect x="164" y="96" width="62" height="46" rx="11"/><text x="195" y="126">V<tspan dy="4">2</tspan></text></g><g class="blk b-t strong a-pop" style="--d:0.22s"><rect x="236" y="96" width="62" height="46" rx="11"/><text x="267" y="126">T<tspan dy="4">2</tspan></text></g><path class="arc arc-g a-draw" d="M195 96 C195 58 123 58 123 96"/><path class="arc arc-g" d="M117.5 88 L123 96 L128.5 88"/><text class="art-note n-g" x="159" y="56">question-guided look</text><path class="arc arc-a a-draw" style="--d:.45s" d="M267 142 C267 180 195 180 195 142"/><path class="arc arc-a" d="M189.5 150 L195 142 L200.5 150"/><text class="art-note n-a" x="231" y="200">reads the scratchpad</text><text class="art-note n-f" x="87" y="168">standard prompt</text><path class="art-brace" d="M22 152 V156 H152 V152"/></svg><!--/art:second-look-->
             </a>
             <div class="pub-text">
-              <h4><a href="https://second-look-vlm.com/">Replay Before You Reply: Second-Look Prompting for Unified Multimodal Encoding</a></h4>
-              <p class="authors"><b>Yicheng Zhang</b>, Xun Zhang, Jingyuan Ma, Tianyu Yu, Yuan Yao</p>
-              <p class="venue"><i>Preprint</i>, 2026.</p>
-              <p class="btns"><a href="assets/papers/replay-before-you-reply.pdf">PDF</a><a href="https://second-look-vlm.com/">Project Page</a></p>
+              <h4><a href="https://arxiv.org/abs/2611.30909">Replay Before You Reply: Second-Look Prompting for Unified Multimodal Encoding</a></h4>
+              <p class="authors"><b>Yicheng Zhang</b>*, Xun Zhang*, Jingyuan Ma*, Tianyu Yu, Yuan Yao</p>
+              <p class="venue"><i>arXiv:2611.30909</i>, 2026.</p>
+              <p class="btns"><a href="https://arxiv.org/abs/2611.30909">arXiv</a><a href="https://arxiv.org/pdf/2611.30909">PDF</a><a href="https://second-look-vlm.com/">Project Page</a><a href="https://github.com/zycccishere/second-look-prompting">Code</a></p>
               <p class="tldr">Under causal attention, whichever modality comes first is encoded blind to the other. Replaying the image–question pair fixes this without training: <b>all 12 VLMs improve</b>, up to <b>+5.6</b> on MATH-Vision (Gemini 3 Flash). The replayed image acts as a <i>prefill scratchpad</i> — even a blank one helps.</p>
             </div>
           </article>
